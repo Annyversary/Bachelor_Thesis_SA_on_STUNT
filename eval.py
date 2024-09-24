@@ -4,20 +4,32 @@ from train.metric_based import get_accuracy
 from utils import MetricLogger
 import numpy as np
 import argparse
-import torch
 import torch.nn as nn
 
-parser = argparse.ArgumentParser(description = 'STUNT')
-parser.add_argument('--data_name', default = 'income', type = str)
-parser.add_argument('--shot_num', default = 1, type=int)
-parser.add_argument('--load_path', default = '', type=str)
-parser.add_argument('--seed', default = 0, type = int)
+parser = argparse.ArgumentParser(description='STUNT')
+parser.add_argument('--data_name', default='income', type=str)  
+parser.add_argument('--shot_num', default=1, type=int)  
+parser.add_argument('--load_path', default='', type=str)
+parser.add_argument('--seed', default=0, type=int) 
 args = parser.parse_args()
 
 if args.data_name == 'income':
     input_size = 105
     output_size = 2
     hidden_dim = 1024
+
+elif args.data_name == 'diabetes':
+    input_size = 8    
+    output_size = 2   
+    hidden_dim = 1024 
+
+elif args.data_name == 'dna':
+    input_size = 360  
+    output_size = 3  
+    hidden_dim = 1024 
+
+else:
+    raise ValueError(f"Unbekannter Datensatz: {args.data_name}")
 
 class MLPProto(nn.Module):
     def __init__(self, in_features, out_features, hidden_sizes, drop_p = 0.):
@@ -40,11 +52,29 @@ class MLPProto(nn.Module):
 model = MLPProto(input_size, hidden_dim, hidden_dim)
 model.load_state_dict(torch.load(args.load_path))
 
-train_x = np.load('./data/'+args.data_name+'/xtrain.npy')
-train_y = np.load('./data/'+args.data_name+'/ytrain.npy')
-test_x = np.load('./data/'+args.data_name+'/xtest.npy')
-test_y = np.load('./data/'+args.data_name+'/ytest.npy')
-train_idx = np.load('./data/'+args.data_name+'/index{}/train_idx_{}.npy'.format(args.shot_num, args.seed))
+if args.data_name == 'diabetes':
+    train_x = np.load('./data/diabetes/data/xtrain.npy')
+    train_y = np.load('./data/diabetes/data/ytrain.npy')
+    test_x = np.load('./data/diabetes/data/xtest.npy')
+    test_y = np.load('./data/diabetes/data/ytest.npy')
+    train_idx = np.load('./data/diabetes/index{}/train_idx_{}.npy'.format(args.shot_num, args.seed))
+
+elif args.data_name == 'income':
+    train_x = np.load('./data/' + args.data_name + '/xtrain.npy')
+    train_y = np.load('./data/' + args.data_name + '/ytrain.npy')
+    test_x = np.load('./data/' + args.data_name + '/xtest.npy')
+    test_y = np.load('./data/' + args.data_name + '/ytest.npy')
+    train_idx = np.load('./data/' + args.data_name + '/index{}/train_idx_{}.npy'.format(args.shot_num, args.seed))
+
+elif args.data_name == 'dna':
+    train_x = np.load('./data/dna/data/xtrain.npy')
+    train_y = np.load('./data/dna/data/ytrain.npy')
+    test_x = np.load('./data/dna/data/xtest.npy')
+    test_y = np.load('./data/dna/data/ytest.npy')
+    train_idx = np.load('./data/dna/index{}/train_idx_{}.npy'.format(args.shot_num, args.seed))
+
+else:
+    raise ValueError(f"Unbekannter Datensatz: {args.data_name}")
 
 few_train = model(torch.tensor(train_x[train_idx]).float())
 support_x = few_train.detach().numpy()
