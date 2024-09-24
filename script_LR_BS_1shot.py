@@ -5,7 +5,7 @@ import numpy as np
 from common.args import parse_args
 from data.dataset import get_meta_dataset
 
-def save_results_to_csv(results_file, seeds, accuracies):
+def save_results_to_csv(results_file, results_row, accuracies):
     """Saves the results to the CSV file."""
     # Calculate average and standard deviation
     if accuracies:
@@ -16,17 +16,17 @@ def save_results_to_csv(results_file, seeds, accuracies):
         std_dev = 'N/A'
 
     # Add the average and standard deviation to the row
-    results_row = accuracies + [average, std_dev]
+    results_row.extend([average, std_dev])
 
     # Write the result to the CSV file
     with open(results_file, mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(results_row)
 
-def run_training_and_evaluation(dataset, r1, r2, num_shots, num_query, num_way, seeds, current_date):
-    """Runs training and evaluation for a specific dataset, r1, r2, and seed."""
+def run_training_and_evaluation(dataset, batch_size, lr, num_shots, num_query, num_way, seeds, current_date):
+    """Runs training and evaluation for a specific dataset, batch_size, lr, and seed."""
     # Create the name of the CSV file
-    results_file_name = f"{current_date}_{dataset}_r1_{r1}_r2_{r2}_5shotEval.csv"
+    results_file_name = f"{current_date}_{dataset}_bs_{batch_size}_lr_{lr}_1shotEval.csv"
     results_file = os.path.join("./results", results_file_name)
 
     # Write the header to the CSV file
@@ -40,12 +40,13 @@ def run_training_and_evaluation(dataset, r1, r2, num_shots, num_query, num_way, 
 
     # Loop over all seeds
     for seed in seeds:
-        log_dir = os.path.join("logs", f"{current_date}_{dataset}_mlp_protonet_{num_way}way_{num_shots}shot_{num_query}query_r1_{r1}_r2_{r2}_seed{seed}")
+        # Set the log directory for the current seed
+        log_dir = os.path.join("logs", f"{current_date}_{dataset}_mlp_protonet_{num_way}way_{num_shots}shot_{num_query}query_batch_{batch_size}_lr_{lr}_seed{seed}")
 
         # Train the model
         train_command = (
             f"python main.py --mode protonet --model mlp --dataset {dataset} --seed {seed} "
-            f"--num_shots {num_shots} --num_shots_test {num_query} --num_ways {num_way} --r1 {r1} --r2 {r2} --outer_steps 1250"
+            f"--num_shots {num_shots} --num_shots_test {num_query} --num_ways {num_way} --batch_size {batch_size} --lr {lr} --outer_steps 1250"
         )
 
         print(f"Running training command: {train_command}")
@@ -78,21 +79,23 @@ def run_training_and_evaluation(dataset, r1, r2, num_shots, num_query, num_way, 
             print(f"Failed to parse result for {dataset} with seed {seed}. Raw result was: {result}")
 
     # Save the results to the CSV file
-    save_results_to_csv(results_file, seeds, accuracies)
+    save_results_to_csv(results_file, [f"batch_size={batch_size}, lr={lr}"], accuracies)
     print(f"Results saved to {results_file}")
 
 def main():
+    # Parse the arguments
+    args = parse_args()
 
     # List of seeds to use
     seeds = range(10)
 
     # List of datasets to use
-    datasets = ["income", "diabetes", "dna"]
+    datasets = ["income","diabetes", "dna"]
 
-    # r1 and r2 values
-    r1_values = [0.3, 0.5, 0.7, 0.9]
-    r2_values = [0.3, 0.5, 0.7, 0.9]
-
+    # Batch sizes and learning rates
+    batch_sizes = [2, 4, 8, 16]
+    learning_rates = [1.00000000e-01, 1.00000000e-02, 1.00000000e-03, 1.00000000e-04, 1.00000000e-05, 1.00000000e-06]
+    
     # Current date for the log folder
     current_date = datetime.now().strftime("%y%m%d")
 
@@ -100,27 +103,24 @@ def main():
     results_dir = "./results"
     os.makedirs(results_dir, exist_ok=True)
 
-    print("Starting r1/r2 evaluation script...")
+    print("Starting batch size and learning rate evaluation script...")
 
     # Loop over all datasets
     for dataset in datasets:
         # Set parameters based on the dataset
-        if dataset in ["diabetes", "dna"]:
-            num_shots = 5
-            num_query = 10
+        if dataset in ["income", "dna"]:
+            num_shots = 1
+            num_query = 15
             num_way = 10
-        elif dataset == "income":
-            num_shots = 5
-            num_query = 20
-            num_way = 10
+        elif dataset == "diabetes":
+            num_shots = 1
+            num_query = 15
+            num_way = 5
 
-        for r1 in r1_values:
-            for r2 in r2_values:
-                # Change to "!=" if r1 == r2 is needed
-                if r1 >= r2:
-                    continue  # Skip this combination as r1 must be less than r2
+        for batch_size in batch_sizes:
+            for lr in learning_rates:
                 # Run the training and evaluation
-                run_training_and_evaluation(dataset, r1, r2, num_shots, num_query, num_way, seeds, current_date)
+                run_training_and_evaluation(dataset, batch_size, lr, num_shots, num_query, num_way, seeds, current_date)
 
 if __name__ == "__main__":
     main()

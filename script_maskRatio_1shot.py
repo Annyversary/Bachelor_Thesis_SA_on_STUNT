@@ -82,8 +82,6 @@ def run_training_and_evaluation(dataset, r1, r2, num_shots, num_query, num_way, 
     print(f"Results saved to {results_file}")
 
 def main():
-    # Parse the arguments
-    args = parse_args()
 
     # List of seeds to use
     seeds = range(10)
