@@ -39,11 +39,11 @@ class SeedGenerator:
 if __name__ == "__main__":
     # Given the number of instances in the dataset
     data_size = 24129  # Total size of the training dataset
-    num_train = 10  # Example: number of data points to be used for training
-    output_dir = 'data/income/index1'
+    num_train = 10 
+    output_dir = 'data/income/index5'
 
     generator = SeedGenerator(data_size, num_train, output_dir)
 
-    # Generate seeds from 10 to 99
+    # Generate seeds from 10 to 99 if needed
     for seed in range(10, 100):
         generator.generate(seed)
