@@ -119,7 +119,7 @@ def main():
         for r1 in r1_values:
             for r2 in r2_values:
                 # Change to "!=" if r1 == r2 is needed
-                if r1 != r2:
+                if r1 >= r2:
                     continue  # Skip this combination as r1 must be less than r2
                 # Run the training and evaluation
                 run_training_and_evaluation(dataset, r1, r2, num_shots, num_query, num_way, seeds, current_date)
