@@ -32,7 +32,7 @@ def run_training_and_evaluation(dataset, r1, r2, num_shots, num_query, num_way, 
     # Write the header to the CSV file
     with open(results_file, mode='w', newline='') as file:
         writer = csv.writer(file)
-        header = ["Seed"] + [f"Seed_{seed}" for seed in seeds] + ["Average", "Standard Deviation"]
+        header = [f"Seed_{seed}" for seed in seeds] + ["Average", "Standard Deviation"]
         writer.writerow(header)
 
     # List to store all seed accuracies

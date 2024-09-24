@@ -32,7 +32,7 @@ def run_training_and_evaluation(dataset, r1, r2, num_shots, num_query, num_way, 
     # Write the header to the CSV file
     with open(results_file, mode='w', newline='') as file:
         writer = csv.writer(file)
-        header = ["Seed"] + [f"Seed_{seed}" for seed in seeds] + ["Average", "Standard Deviation"]
+        header = [f"Seed_{seed}" for seed in seeds] + ["Average", "Standard Deviation"]
         writer.writerow(header)
 
     # List to store all seed accuracies
@@ -45,7 +45,7 @@ def run_training_and_evaluation(dataset, r1, r2, num_shots, num_query, num_way, 
         # Train the model
         train_command = (
             f"python main.py --mode protonet --model mlp --dataset {dataset} --seed {seed} "
-            f"--num_shots {num_shots} --num_shots_test {num_query} --num_ways {num_way} --r1 {r1} --r2 {r2} --outer_steps 1250"
+            f"--num_shots {num_shots} --num_shots_test {num_query} --num_ways {num_way} --r1 {r1} --r2 {r2} --outer_steps 50"
         )
 
         print(f"Running training command: {train_command}")
