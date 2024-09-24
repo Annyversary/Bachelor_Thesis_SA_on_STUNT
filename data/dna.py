@@ -97,8 +97,8 @@ class DNA(object):
                         with open(one_hot_json_path, 'r') as f:
                             one_hot_indices = json.load(f)
                     except (IOError, json.JSONDecodeError) as e:
-                        print(f"Fehler beim Laden der JSON-Datei: {e}")
-
+                        print(f"Error loading the JSON file: {e}")
+ 
                 while min_count < (self.shot + self.query):
                     min_col = int(x.shape[1] * self.r1)
                     max_col = int(x.shape[1] * self.r2)
