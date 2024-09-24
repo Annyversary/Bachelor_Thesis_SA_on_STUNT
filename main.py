@@ -43,7 +43,9 @@ def main(rank, P):
     test_func = test_setup(P.mode, P)
 
     """ Define logger """
-    logger = Logger(fname, ask=P.resume_path is None, today=today, rank=P.rank)
+    #log_dir_name = f"{fname}_batch_{P.batch_size}_lr_{P.lr}_seed{P.seed}"
+    log_dir_name = f"{fname}_r1_{P.r1}_r2_{P.r2}_seed{P.seed}"
+    logger = Logger(log_dir_name, ask=P.resume_path is None, today=today, rank=P.rank)
     logger.log(P)
     logger.log(model)
 
