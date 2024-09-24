@@ -1,12 +1,12 @@
-from re import I
 import numpy as np
 import torch
 import os
 import copy
 import faiss
+import json
 
 class Income(object):
-    def __init__(self, tabular_size, seed, source, shot, tasks_per_batch, test_num_way, query):
+    def __init__(self, tabular_size, seed, source, shot, tasks_per_batch, test_num_way, query, r1, r2):
         super().__init__()
         self.num_classes = 2
         self.tabular_size = tabular_size
@@ -14,11 +14,14 @@ class Income(object):
         self.shot = shot
         self.query = query
         self.tasks_per_batch = tasks_per_batch
+        self.r1 = r1
+        self.r2 = r2
+
         self.unlabeled_x = np.load('./data/income/train_x.npy')
         self.test_x = np.load('./data/income/xtest.npy')
         self.test_y = np.load('./data/income/ytest.npy')
         self.val_x = np.load('./data/income/val_x.npy')
-        self.val_y = np.load('./data/income/val_y.npy') # val_y is given from pseudo-validaiton scheme with STUNT
+        self.val_y = np.load('./data/income/pseudo_val_y.npy')    
         self.test_num_way = test_num_way
         self.test_rng = np.random.RandomState(seed)
         self.val_rng = np.random.RandomState(seed)
@@ -29,7 +32,7 @@ class Income(object):
     def __iter__(self):
         return self
 
-    def get_batch(self):
+    def get_batch(self, one_hot_json_path="data/income/one_hot_indices_income.json"):
         xs, ys, xq, yq = [], [], [], []
         if self.source == 'train':
             x = self.unlabeled_x
@@ -38,21 +41,18 @@ class Income(object):
         elif self.source == 'val':
             x = self.val_x
             y = self.val_y
-            class_list,_ = np.unique(y,return_counts=True) 
-            num_val_shot = 1
+            class_list, _ = np.unique(y, return_counts=True)
+            num_val_shot = 1  
+            num_way = 2 
 
-            num_way = 2
-        
         for _ in range(self.tasks_per_batch):
-            
             support_set = []
             query_set = []
             support_sety = []
             query_sety = []
 
             if self.source == 'val':
-
-                classes = np.random.choice(class_list, num_way, replace = False)
+                classes = np.random.choice(class_list, num_way, replace=False)
                 support_idx = []
                 query_idx = []
                 for k in classes:
@@ -60,10 +60,9 @@ class Income(object):
                     permutation = np.random.permutation(len(k_idx))
                     k_idx = k_idx[permutation]
                     support_idx.append(k_idx[:num_val_shot])
-                    query_idx.append(k_idx[num_val_shot:num_val_shot+30])
+                    query_idx.append(k_idx[num_val_shot:num_val_shot + 30])
                 support_idx = np.concatenate(support_idx)
                 query_idx = np.concatenate(query_idx)
-                
                 support_x = x[support_idx]
                 query_x = x[query_idx]
                 s_y = y[support_idx]
@@ -75,7 +74,7 @@ class Income(object):
                 for k in classes:
                     support_y[s_y == k] = i
                     query_y[q_y == k] = i
-                    i+=1
+                    i += 1
 
                 support_set.append(support_x)
                 support_sety.append(support_y)
@@ -85,26 +84,50 @@ class Income(object):
             elif self.source == 'train':
                 tmp_x = copy.deepcopy(x)
                 min_count = 0
+
+                # all-or-nothing approach
+                one_hot_indices = []
+                if one_hot_json_path is not None:
+                    try:
+                        with open(one_hot_json_path, 'r') as f:
+                            one_hot_indices = json.load(f)
+                    except (IOError, json.JSONDecodeError) as e:
+                            print(f"Error loading the JSON file: {e}")
+
                 while min_count < (self.shot + self.query):
-                    min_col = int(x.shape[1] * 0.2)
-                    max_col = int(x.shape[1] * 0.5)
-                    col = np.random.choice(range(min_col, max_col), 1, replace = False)[0]
-                    task_idx = np.random.choice([i for i in range(x.shape[1])], col, replace = False)
-                    masked_x = np.ascontiguousarray(x[:, task_idx], dtype = np.float32)
-                    kmeans = faiss.Kmeans(masked_x.shape[1], num_way, niter=20, nredo=1, verbose=False, min_points_per_centroid = self.shot + self.query, gpu=1)
+                    min_col = int(x.shape[1] * self.r1)
+                    max_col = int(x.shape[1] * self.r2)
+                    # in case r1 == r2, comment out line 101 and use line 102 instead
+                    col = np.random.choice(range(min_col, max_col), 1, replace=False)[0]
+                    #col = max_col 
+                    task_idx = np.random.choice([i for i in range(x.shape[1])], col, replace=False)             
+                    
+                    # All-or-nothing approach; um ihn zu nutzen, einfach die kommentare wegnehmen
+                    #extended_task_idx = set(task_idx)
+                    # Iterate through task_idx and check if a value exists in a row of one_hot_indices
+                    #if one_hot_indices is not None:
+                        #for idx in task_idx:
+                            #for indices in one_hot_indices:
+                                # Check if the current task_idx value exists in a row of one_hot_indices
+                                #if idx in indices:
+                                    # Add all values from this row of one_hot_indices to the set
+                                    #extended_task_idx.update(indices)
+                    #task_idx = np.array(list(extended_task_idx))
+                   
+                    masked_x = np.ascontiguousarray(x[:, task_idx], dtype=np.float32)
+                    kmeans = faiss.Kmeans(masked_x.shape[1], num_way, niter=20, nredo=1, verbose=False, min_points_per_centroid=self.shot + self.query, gpu=1)
                     kmeans.train(masked_x)
                     D, I = kmeans.index.search(masked_x, 1)
-                    y = I[:,0].astype(np.int32)
-                    class_list, counts = np.unique(y, return_counts = True)
+                    y = I[:, 0].astype(np.int32)
+                    class_list, counts = np.unique(y, return_counts=True)
                     min_count = min(counts)
                     
                 num_to_permute = x.shape[0]
                 for t_idx in task_idx:
                     rand_perm = np.random.permutation(num_to_permute)
-                    tmp_x[:, t_idx] = tmp_x[:, t_idx][rand_perm] 
+                    tmp_x[:, t_idx] = tmp_x[:, t_idx][rand_perm]
 
-                classes = np.random.choice(class_list, num_way, replace = False)
-                    
+                classes = np.random.choice(class_list, num_way, replace=False)
                 support_idx = []
                 query_idx = []
                 for k in classes:
