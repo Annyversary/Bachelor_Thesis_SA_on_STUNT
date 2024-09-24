@@ -44,9 +44,10 @@ def main(rank, P):
 
     """ Define logger """
     # use different log labels as needed
+    log_dir_name = f"{fname}_seed{P.seed}"
     #log_dir_name = f"{fname}_batch_{P.batch_size}_lr_{P.lr}_seed{P.seed}"
     #log_dir_name = f"{fname}_r1_{P.r1}_r2_{P.r2}_seed{P.seed}"
-    log_dir_name = f"{fname}_trainingStep{P.outer_steps}_seed{P.seed}"
+    #log_dir_name = f"{fname}_trainingStep{P.outer_steps}_seed{P.seed}"
     logger = Logger(log_dir_name, ask=P.resume_path is None, today=today, rank=P.rank)
     logger.log(P)
     logger.log(model)
