@@ -1,0 +1,809 @@
+[2024-08-17 10:57:41.644420] Namespace(baseline=False, batch_size=4, dataset='diabetes', distributed=False, eval_step=50, load_path=None, lr=0.001, max_test_task=1000, mode='protonet', model='mlp', no_strict=False, num_shots=5, num_shots_global=0, num_shots_test=20, num_ways=5, outer_steps=10000, print_step=50, rank=0, regression=False, resume_path=None, save_step=1250, seed=0, suffix=None, test_batch_size=4, world_size=1)
+[2024-08-17 10:57:41.644937] MLPProto(
+  (encoder): Sequential(
+    (0): Linear(in_features=8, out_features=1024, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+)
+Start training (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+Step 50 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:42.920375] [TRAIN] [Step  50] [Time 0.011] [Data 0.015] [MetaTestLoss 1.548381]
+[2024-08-17 10:57:43.172759]  * [Acc@1 77.623] [LossOut 0.544]
+[2024-08-17 10:57:43.199230] [EVAL] [Step  50] [Acc 77.62] [Best 77.62]
+Step 100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:44.002487] [TRAIN] [Step 100] [Time 0.006] [Data 0.014] [MetaTestLoss 1.539312]
+[2024-08-17 10:57:44.246101]  * [Acc@1 74.334] [LossOut 0.598]
+[2024-08-17 10:57:44.246482] [EVAL] [Step 100] [Acc 74.33] [Best 77.62]
+Step 150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:45.197573] [TRAIN] [Step 150] [Time 0.005] [Data 0.015] [MetaTestLoss 1.531329]
+[2024-08-17 10:57:45.441127]  * [Acc@1 74.024] [LossOut 0.593]
+[2024-08-17 10:57:45.441352] [EVAL] [Step 150] [Acc 74.02] [Best 77.62]
+Step 200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:46.368323] [TRAIN] [Step 200] [Time 0.004] [Data 0.016] [MetaTestLoss 1.527167]
+[2024-08-17 10:57:46.629053]  * [Acc@1 74.829] [LossOut 0.569]
+[2024-08-17 10:57:46.629265] [EVAL] [Step 200] [Acc 74.83] [Best 77.62]
+Step 250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:47.494195] [TRAIN] [Step 250] [Time 0.004] [Data 0.015] [MetaTestLoss 1.522734]
+[2024-08-17 10:57:47.738294]  * [Acc@1 78.899] [LossOut 0.500]
+[2024-08-17 10:57:47.764126] [EVAL] [Step 250] [Acc 78.90] [Best 78.90]
+Step 300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:48.550720] [TRAIN] [Step 300] [Time 0.003] [Data 0.015] [MetaTestLoss 1.519403]
+[2024-08-17 10:57:48.789459]  * [Acc@1 70.860] [LossOut 0.691]
+[2024-08-17 10:57:48.789781] [EVAL] [Step 300] [Acc 70.86] [Best 78.90]
+Step 350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:49.559356] [TRAIN] [Step 350] [Time 0.003] [Data 0.015] [MetaTestLoss 1.515001]
+[2024-08-17 10:57:49.800093]  * [Acc@1 76.426] [LossOut 0.536]
+[2024-08-17 10:57:49.800393] [EVAL] [Step 350] [Acc 76.43] [Best 78.90]
+Step 400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:50.549913] [TRAIN] [Step 400] [Time 0.003] [Data 0.015] [MetaTestLoss 1.511655]
+[2024-08-17 10:57:50.795753]  * [Acc@1 78.124] [LossOut 0.502]
+[2024-08-17 10:57:50.796180] [EVAL] [Step 400] [Acc 78.12] [Best 78.90]
+Step 450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:51.548612] [TRAIN] [Step 450] [Time 0.003] [Data 0.014] [MetaTestLoss 1.507738]
+[2024-08-17 10:57:51.794144]  * [Acc@1 72.082] [LossOut 0.662]
+[2024-08-17 10:57:51.794475] [EVAL] [Step 450] [Acc 72.08] [Best 78.90]
+Step 500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:52.567799] [TRAIN] [Step 500] [Time 0.003] [Data 0.014] [MetaTestLoss 1.506078]
+[2024-08-17 10:57:52.809026]  * [Acc@1 66.018] [LossOut 0.728]
+[2024-08-17 10:57:52.809273] [EVAL] [Step 500] [Acc 66.02] [Best 78.90]
+Step 550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:53.919079] [TRAIN] [Step 550] [Time 0.003] [Data 0.015] [MetaTestLoss 1.504009]
+[2024-08-17 10:57:54.160147]  * [Acc@1 76.398] [LossOut 0.563]
+[2024-08-17 10:57:54.160374] [EVAL] [Step 550] [Acc 76.40] [Best 78.90]
+Step 600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:54.984358] [TRAIN] [Step 600] [Time 0.003] [Data 0.015] [MetaTestLoss 1.501650]
+[2024-08-17 10:57:55.227899]  * [Acc@1 69.130] [LossOut 0.745]
+[2024-08-17 10:57:55.228186] [EVAL] [Step 600] [Acc 69.13] [Best 78.90]
+Step 650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:56.116393] [TRAIN] [Step 650] [Time 0.003] [Data 0.015] [MetaTestLoss 1.499994]
+[2024-08-17 10:57:56.355424]  * [Acc@1 78.607] [LossOut 0.530]
+[2024-08-17 10:57:56.355620] [EVAL] [Step 650] [Acc 78.61] [Best 78.90]
+Step 700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:57.148932] [TRAIN] [Step 700] [Time 0.003] [Data 0.015] [MetaTestLoss 1.498432]
+[2024-08-17 10:57:57.386609]  * [Acc@1 75.636] [LossOut 0.553]
+[2024-08-17 10:57:57.386897] [EVAL] [Step 700] [Acc 75.64] [Best 78.90]
+Step 750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:58.330358] [TRAIN] [Step 750] [Time 0.003] [Data 0.015] [MetaTestLoss 1.496879]
+[2024-08-17 10:57:58.571908]  * [Acc@1 73.765] [LossOut 0.612]
+[2024-08-17 10:57:58.572107] [EVAL] [Step 750] [Acc 73.76] [Best 78.90]
+Step 800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:57:59.521718] [TRAIN] [Step 800] [Time 0.003] [Data 0.015] [MetaTestLoss 1.495076]
+[2024-08-17 10:57:59.825251]  * [Acc@1 76.263] [LossOut 0.634]
+[2024-08-17 10:57:59.825508] [EVAL] [Step 800] [Acc 76.26] [Best 78.90]
+Step 850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:00.755809] [TRAIN] [Step 850] [Time 0.003] [Data 0.015] [MetaTestLoss 1.493710]
+[2024-08-17 10:58:00.998652]  * [Acc@1 81.170] [LossOut 0.453]
+[2024-08-17 10:58:01.022906] [EVAL] [Step 850] [Acc 81.17] [Best 81.17]
+Step 900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:02.188392] [TRAIN] [Step 900] [Time 0.003] [Data 0.015] [MetaTestLoss 1.492231]
+[2024-08-17 10:58:02.441747]  * [Acc@1 73.240] [LossOut 0.595]
+[2024-08-17 10:58:02.441967] [EVAL] [Step 900] [Acc 73.24] [Best 81.17]
+Step 950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:03.717942] [TRAIN] [Step 950] [Time 0.003] [Data 0.016] [MetaTestLoss 1.491305]
+[2024-08-17 10:58:03.977338]  * [Acc@1 75.226] [LossOut 0.612]
+[2024-08-17 10:58:03.977550] [EVAL] [Step 950] [Acc 75.23] [Best 81.17]
+Step 1000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:04.978751] [TRAIN] [Step 1000] [Time 0.002] [Data 0.016] [MetaTestLoss 1.490514]
+[2024-08-17 10:58:05.239353]  * [Acc@1 75.272] [LossOut 0.593]
+[2024-08-17 10:58:05.239600] [EVAL] [Step 1000] [Acc 75.27] [Best 81.17]
+Step 1050 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:06.133663] [TRAIN] [Step 1050] [Time 0.002] [Data 0.016] [MetaTestLoss 1.488976]
+[2024-08-17 10:58:06.379523]  * [Acc@1 70.885] [LossOut 0.718]
+[2024-08-17 10:58:06.379737] [EVAL] [Step 1050] [Acc 70.88] [Best 81.17]
+Step 1100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:07.590450] [TRAIN] [Step 1100] [Time 0.002] [Data 0.016] [MetaTestLoss 1.487501]
+[2024-08-17 10:58:07.848412]  * [Acc@1 73.987] [LossOut 0.657]
+[2024-08-17 10:58:07.848781] [EVAL] [Step 1100] [Acc 73.99] [Best 81.17]
+Step 1150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:08.671835] [TRAIN] [Step 1150] [Time 0.002] [Data 0.016] [MetaTestLoss 1.486616]
+[2024-08-17 10:58:08.917810]  * [Acc@1 78.813] [LossOut 0.498]
+[2024-08-17 10:58:08.918066] [EVAL] [Step 1150] [Acc 78.81] [Best 81.17]
+Step 1200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:09.810126] [TRAIN] [Step 1200] [Time 0.002] [Data 0.016] [MetaTestLoss 1.485527]
+[2024-08-17 10:58:10.047390]  * [Acc@1 72.072] [LossOut 0.667]
+[2024-08-17 10:58:10.047633] [EVAL] [Step 1200] [Acc 72.07] [Best 81.17]
+Step 1250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:10.895429] [TRAIN] [Step 1250] [Time 0.002] [Data 0.016] [MetaTestLoss 1.484180]
+[2024-08-17 10:58:11.136111]  * [Acc@1 76.408] [LossOut 0.559]
+[2024-08-17 10:58:11.136353] [EVAL] [Step 1250] [Acc 76.41] [Best 81.17]
+Step 1300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:12.227667] [TRAIN] [Step 1300] [Time 0.002] [Data 0.016] [MetaTestLoss 1.482779]
+[2024-08-17 10:58:12.467600]  * [Acc@1 72.359] [LossOut 0.695]
+[2024-08-17 10:58:12.467893] [EVAL] [Step 1300] [Acc 72.36] [Best 81.17]
+Step 1350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:13.386290] [TRAIN] [Step 1350] [Time 0.002] [Data 0.016] [MetaTestLoss 1.481816]
+[2024-08-17 10:58:13.626270]  * [Acc@1 72.566] [LossOut 0.691]
+[2024-08-17 10:58:13.626520] [EVAL] [Step 1350] [Acc 72.57] [Best 81.17]
+Step 1400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:14.464737] [TRAIN] [Step 1400] [Time 0.002] [Data 0.016] [MetaTestLoss 1.481131]
+[2024-08-17 10:58:14.706157]  * [Acc@1 73.826] [LossOut 0.624]
+[2024-08-17 10:58:14.706356] [EVAL] [Step 1400] [Acc 73.83] [Best 81.17]
+Step 1450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:15.469568] [TRAIN] [Step 1450] [Time 0.002] [Data 0.016] [MetaTestLoss 1.479907]
+[2024-08-17 10:58:15.720555]  * [Acc@1 75.347] [LossOut 0.663]
+[2024-08-17 10:58:15.720818] [EVAL] [Step 1450] [Acc 75.35] [Best 81.17]
+Step 1500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:17.251735] [TRAIN] [Step 1500] [Time 0.002] [Data 0.016] [MetaTestLoss 1.478347]
+[2024-08-17 10:58:17.498234]  * [Acc@1 75.475] [LossOut 0.566]
+[2024-08-17 10:58:17.498455] [EVAL] [Step 1500] [Acc 75.47] [Best 81.17]
+Step 1550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:18.313017] [TRAIN] [Step 1550] [Time 0.002] [Data 0.016] [MetaTestLoss 1.478110]
+[2024-08-17 10:58:18.553529]  * [Acc@1 72.493] [LossOut 0.629]
+[2024-08-17 10:58:18.553714] [EVAL] [Step 1550] [Acc 72.49] [Best 81.17]
+Step 1600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:19.689675] [TRAIN] [Step 1600] [Time 0.002] [Data 0.017] [MetaTestLoss 1.477341]
+[2024-08-17 10:58:19.937376]  * [Acc@1 72.852] [LossOut 0.643]
+[2024-08-17 10:58:19.937592] [EVAL] [Step 1600] [Acc 72.85] [Best 81.17]
+Step 1650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:21.601778] [TRAIN] [Step 1650] [Time 0.002] [Data 0.017] [MetaTestLoss 1.476355]
+[2024-08-17 10:58:21.845517]  * [Acc@1 79.205] [LossOut 0.512]
+[2024-08-17 10:58:21.845759] [EVAL] [Step 1650] [Acc 79.20] [Best 81.17]
+Step 1700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:22.833218] [TRAIN] [Step 1700] [Time 0.002] [Data 0.017] [MetaTestLoss 1.475396]
+[2024-08-17 10:58:23.090501]  * [Acc@1 76.215] [LossOut 0.581]
+[2024-08-17 10:58:23.090890] [EVAL] [Step 1700] [Acc 76.22] [Best 81.17]
+Step 1750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:24.092460] [TRAIN] [Step 1750] [Time 0.002] [Data 0.017] [MetaTestLoss 1.474287]
+[2024-08-17 10:58:24.342287]  * [Acc@1 75.845] [LossOut 0.573]
+[2024-08-17 10:58:24.342591] [EVAL] [Step 1750] [Acc 75.84] [Best 81.17]
+Step 1800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:25.179978] [TRAIN] [Step 1800] [Time 0.002] [Data 0.017] [MetaTestLoss 1.473593]
+[2024-08-17 10:58:25.433682]  * [Acc@1 75.461] [LossOut 0.612]
+[2024-08-17 10:58:25.433936] [EVAL] [Step 1800] [Acc 75.46] [Best 81.17]
+Step 1850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:26.858229] [TRAIN] [Step 1850] [Time 0.002] [Data 0.017] [MetaTestLoss 1.473002]
+[2024-08-17 10:58:27.109259]  * [Acc@1 73.944] [LossOut 0.608]
+[2024-08-17 10:58:27.109466] [EVAL] [Step 1850] [Acc 73.94] [Best 81.17]
+Step 1900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:28.061081] [TRAIN] [Step 1900] [Time 0.002] [Data 0.017] [MetaTestLoss 1.471957]
+[2024-08-17 10:58:28.318416]  * [Acc@1 73.217] [LossOut 0.634]
+[2024-08-17 10:58:28.318887] [EVAL] [Step 1900] [Acc 73.22] [Best 81.17]
+Step 1950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:29.336837] [TRAIN] [Step 1950] [Time 0.002] [Data 0.017] [MetaTestLoss 1.471465]
+[2024-08-17 10:58:29.578408]  * [Acc@1 74.334] [LossOut 0.598]
+[2024-08-17 10:58:29.578805] [EVAL] [Step 1950] [Acc 74.33] [Best 81.17]
+Step 2000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:30.352873] [TRAIN] [Step 2000] [Time 0.002] [Data 0.017] [MetaTestLoss 1.470675]
+[2024-08-17 10:58:30.589783]  * [Acc@1 76.861] [LossOut 0.557]
+[2024-08-17 10:58:30.589968] [EVAL] [Step 2000] [Acc 76.86] [Best 81.17]
+Step 2050 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:31.781063] [TRAIN] [Step 2050] [Time 0.002] [Data 0.017] [MetaTestLoss 1.469972]
+[2024-08-17 10:58:32.016515]  * [Acc@1 72.052] [LossOut 0.679]
+[2024-08-17 10:58:32.016699] [EVAL] [Step 2050] [Acc 72.05] [Best 81.17]
+Step 2100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:32.674805] [TRAIN] [Step 2100] [Time 0.002] [Data 0.017] [MetaTestLoss 1.468813]
+[2024-08-17 10:58:32.913966]  * [Acc@1 75.231] [LossOut 0.579]
+[2024-08-17 10:58:32.914189] [EVAL] [Step 2100] [Acc 75.23] [Best 81.17]
+Step 2150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:33.777502] [TRAIN] [Step 2150] [Time 0.002] [Data 0.017] [MetaTestLoss 1.468291]
+[2024-08-17 10:58:34.016458]  * [Acc@1 79.359] [LossOut 0.512]
+[2024-08-17 10:58:34.016824] [EVAL] [Step 2150] [Acc 79.36] [Best 81.17]
+Step 2200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:34.833342] [TRAIN] [Step 2200] [Time 0.002] [Data 0.017] [MetaTestLoss 1.467593]
+[2024-08-17 10:58:35.071305]  * [Acc@1 73.103] [LossOut 0.638]
+[2024-08-17 10:58:35.071608] [EVAL] [Step 2200] [Acc 73.10] [Best 81.17]
+Step 2250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:35.836443] [TRAIN] [Step 2250] [Time 0.002] [Data 0.017] [MetaTestLoss 1.466975]
+[2024-08-17 10:58:36.072062]  * [Acc@1 74.560] [LossOut 0.608]
+[2024-08-17 10:58:36.072293] [EVAL] [Step 2250] [Acc 74.56] [Best 81.17]
+Step 2300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:36.801221] [TRAIN] [Step 2300] [Time 0.002] [Data 0.017] [MetaTestLoss 1.466113]
+[2024-08-17 10:58:37.038994]  * [Acc@1 74.193] [LossOut 0.655]
+[2024-08-17 10:58:37.039273] [EVAL] [Step 2300] [Acc 74.19] [Best 81.17]
+Step 2350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:37.811066] [TRAIN] [Step 2350] [Time 0.002] [Data 0.017] [MetaTestLoss 1.465432]
+[2024-08-17 10:58:38.048748]  * [Acc@1 67.759] [LossOut 0.765]
+[2024-08-17 10:58:38.049020] [EVAL] [Step 2350] [Acc 67.76] [Best 81.17]
+Step 2400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:38.740371] [TRAIN] [Step 2400] [Time 0.002] [Data 0.017] [MetaTestLoss 1.464738]
+[2024-08-17 10:58:38.980584]  * [Acc@1 73.645] [LossOut 0.699]
+[2024-08-17 10:58:38.980999] [EVAL] [Step 2400] [Acc 73.65] [Best 81.17]
+Step 2450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:40.043694] [TRAIN] [Step 2450] [Time 0.002] [Data 0.017] [MetaTestLoss 1.464374]
+[2024-08-17 10:58:40.279725]  * [Acc@1 72.347] [LossOut 0.656]
+[2024-08-17 10:58:40.279919] [EVAL] [Step 2450] [Acc 72.35] [Best 81.17]
+Step 2500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:41.420741] [TRAIN] [Step 2500] [Time 0.002] [Data 0.017] [MetaTestLoss 1.463491]
+[2024-08-17 10:58:41.661360]  * [Acc@1 74.949] [LossOut 0.609]
+[2024-08-17 10:58:41.661550] [EVAL] [Step 2500] [Acc 74.95] [Best 81.17]
+Step 2550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:42.381040] [TRAIN] [Step 2550] [Time 0.002] [Data 0.017] [MetaTestLoss 1.462927]
+[2024-08-17 10:58:42.621694]  * [Acc@1 73.743] [LossOut 0.641]
+[2024-08-17 10:58:42.621893] [EVAL] [Step 2550] [Acc 73.74] [Best 81.17]
+Step 2600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:43.374408] [TRAIN] [Step 2600] [Time 0.002] [Data 0.017] [MetaTestLoss 1.462219]
+[2024-08-17 10:58:43.612485]  * [Acc@1 77.163] [LossOut 0.569]
+[2024-08-17 10:58:43.612810] [EVAL] [Step 2600] [Acc 77.16] [Best 81.17]
+Step 2650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:44.329233] [TRAIN] [Step 2650] [Time 0.002] [Data 0.016] [MetaTestLoss 1.461841]
+[2024-08-17 10:58:44.566438]  * [Acc@1 75.913] [LossOut 0.598]
+[2024-08-17 10:58:44.566632] [EVAL] [Step 2650] [Acc 75.91] [Best 81.17]
+Step 2700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:45.471632] [TRAIN] [Step 2700] [Time 0.002] [Data 0.016] [MetaTestLoss 1.461450]
+[2024-08-17 10:58:45.711875]  * [Acc@1 74.688] [LossOut 0.625]
+[2024-08-17 10:58:45.712078] [EVAL] [Step 2700] [Acc 74.69] [Best 81.17]
+Step 2750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:46.598729] [TRAIN] [Step 2750] [Time 0.002] [Data 0.016] [MetaTestLoss 1.460989]
+[2024-08-17 10:58:46.837107]  * [Acc@1 75.715] [LossOut 0.586]
+[2024-08-17 10:58:46.837291] [EVAL] [Step 2750] [Acc 75.72] [Best 81.17]
+Step 2800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:47.561384] [TRAIN] [Step 2800] [Time 0.002] [Data 0.016] [MetaTestLoss 1.460416]
+[2024-08-17 10:58:47.797407]  * [Acc@1 75.312] [LossOut 0.633]
+[2024-08-17 10:58:47.797591] [EVAL] [Step 2800] [Acc 75.31] [Best 81.17]
+Step 2850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:48.529733] [TRAIN] [Step 2850] [Time 0.002] [Data 0.016] [MetaTestLoss 1.459795]
+[2024-08-17 10:58:48.768786]  * [Acc@1 71.443] [LossOut 0.697]
+[2024-08-17 10:58:48.769093] [EVAL] [Step 2850] [Acc 71.44] [Best 81.17]
+Step 2900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:49.514673] [TRAIN] [Step 2900] [Time 0.002] [Data 0.016] [MetaTestLoss 1.459276]
+[2024-08-17 10:58:49.757527]  * [Acc@1 73.298] [LossOut 0.684]
+[2024-08-17 10:58:49.757884] [EVAL] [Step 2900] [Acc 73.30] [Best 81.17]
+Step 2950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:50.661651] [TRAIN] [Step 2950] [Time 0.002] [Data 0.016] [MetaTestLoss 1.458986]
+[2024-08-17 10:58:50.903830]  * [Acc@1 76.474] [LossOut 0.607]
+[2024-08-17 10:58:50.904166] [EVAL] [Step 2950] [Acc 76.47] [Best 81.17]
+Step 3000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:51.609519] [TRAIN] [Step 3000] [Time 0.002] [Data 0.016] [MetaTestLoss 1.458743]
+[2024-08-17 10:58:51.852297]  * [Acc@1 66.467] [LossOut 0.792]
+[2024-08-17 10:58:51.852640] [EVAL] [Step 3000] [Acc 66.47] [Best 81.17]
+Step 3050 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:52.556166] [TRAIN] [Step 3050] [Time 0.002] [Data 0.016] [MetaTestLoss 1.458183]
+[2024-08-17 10:58:52.792693]  * [Acc@1 72.268] [LossOut 0.653]
+[2024-08-17 10:58:52.792887] [EVAL] [Step 3050] [Acc 72.27] [Best 81.17]
+Step 3100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:53.501238] [TRAIN] [Step 3100] [Time 0.002] [Data 0.016] [MetaTestLoss 1.457847]
+[2024-08-17 10:58:53.735431]  * [Acc@1 72.294] [LossOut 0.786]
+[2024-08-17 10:58:53.735621] [EVAL] [Step 3100] [Acc 72.29] [Best 81.17]
+Step 3150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:54.685103] [TRAIN] [Step 3150] [Time 0.002] [Data 0.016] [MetaTestLoss 1.457268]
+[2024-08-17 10:58:54.924731]  * [Acc@1 72.015] [LossOut 0.648]
+[2024-08-17 10:58:54.924972] [EVAL] [Step 3150] [Acc 72.02] [Best 81.17]
+Step 3200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:55.641946] [TRAIN] [Step 3200] [Time 0.002] [Data 0.016] [MetaTestLoss 1.456939]
+[2024-08-17 10:58:55.884940]  * [Acc@1 70.583] [LossOut 0.737]
+[2024-08-17 10:58:55.885136] [EVAL] [Step 3200] [Acc 70.58] [Best 81.17]
+Step 3250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:56.574752] [TRAIN] [Step 3250] [Time 0.002] [Data 0.016] [MetaTestLoss 1.456448]
+[2024-08-17 10:58:56.837577]  * [Acc@1 73.255] [LossOut 0.647]
+[2024-08-17 10:58:56.837791] [EVAL] [Step 3250] [Acc 73.26] [Best 81.17]
+Step 3300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:57.493106] [TRAIN] [Step 3300] [Time 0.002] [Data 0.016] [MetaTestLoss 1.455932]
+[2024-08-17 10:58:57.733392]  * [Acc@1 76.484] [LossOut 0.588]
+[2024-08-17 10:58:57.733576] [EVAL] [Step 3300] [Acc 76.48] [Best 81.17]
+Step 3350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:58.617696] [TRAIN] [Step 3350] [Time 0.002] [Data 0.016] [MetaTestLoss 1.455298]
+[2024-08-17 10:58:58.861982]  * [Acc@1 70.671] [LossOut 0.731]
+[2024-08-17 10:58:58.862171] [EVAL] [Step 3350] [Acc 70.67] [Best 81.17]
+Step 3400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:58:59.700820] [TRAIN] [Step 3400] [Time 0.002] [Data 0.016] [MetaTestLoss 1.454888]
+[2024-08-17 10:58:59.943095]  * [Acc@1 76.859] [LossOut 0.661]
+[2024-08-17 10:58:59.943320] [EVAL] [Step 3400] [Acc 76.86] [Best 81.17]
+Step 3450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:00.726552] [TRAIN] [Step 3450] [Time 0.002] [Data 0.016] [MetaTestLoss 1.454387]
+[2024-08-17 10:59:00.964208]  * [Acc@1 73.229] [LossOut 0.709]
+[2024-08-17 10:59:00.964548] [EVAL] [Step 3450] [Acc 73.23] [Best 81.17]
+Step 3500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:01.668013] [TRAIN] [Step 3500] [Time 0.002] [Data 0.016] [MetaTestLoss 1.453943]
+[2024-08-17 10:59:01.907888]  * [Acc@1 71.527] [LossOut 0.772]
+[2024-08-17 10:59:01.908116] [EVAL] [Step 3500] [Acc 71.53] [Best 81.17]
+Step 3550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:02.707426] [TRAIN] [Step 3550] [Time 0.002] [Data 0.016] [MetaTestLoss 1.453674]
+[2024-08-17 10:59:02.957308]  * [Acc@1 72.844] [LossOut 0.663]
+[2024-08-17 10:59:02.957531] [EVAL] [Step 3550] [Acc 72.84] [Best 81.17]
+Step 3600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:03.642351] [TRAIN] [Step 3600] [Time 0.002] [Data 0.016] [MetaTestLoss 1.453271]
+[2024-08-17 10:59:03.881562]  * [Acc@1 74.089] [LossOut 0.653]
+[2024-08-17 10:59:03.881779] [EVAL] [Step 3600] [Acc 74.09] [Best 81.17]
+Step 3650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:04.671872] [TRAIN] [Step 3650] [Time 0.002] [Data 0.016] [MetaTestLoss 1.452732]
+[2024-08-17 10:59:04.905982]  * [Acc@1 78.350] [LossOut 0.625]
+[2024-08-17 10:59:04.906156] [EVAL] [Step 3650] [Acc 78.35] [Best 81.17]
+Step 3700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:05.985020] [TRAIN] [Step 3700] [Time 0.002] [Data 0.016] [MetaTestLoss 1.452144]
+[2024-08-17 10:59:06.226334]  * [Acc@1 73.435] [LossOut 0.724]
+[2024-08-17 10:59:06.226541] [EVAL] [Step 3700] [Acc 73.43] [Best 81.17]
+Step 3750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:06.917178] [TRAIN] [Step 3750] [Time 0.002] [Data 0.016] [MetaTestLoss 1.451742]
+[2024-08-17 10:59:07.161115]  * [Acc@1 76.069] [LossOut 0.668]
+[2024-08-17 10:59:07.161309] [EVAL] [Step 3750] [Acc 76.07] [Best 81.17]
+Step 3800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:07.896424] [TRAIN] [Step 3800] [Time 0.002] [Data 0.016] [MetaTestLoss 1.451267]
+[2024-08-17 10:59:08.151691]  * [Acc@1 75.262] [LossOut 0.650]
+[2024-08-17 10:59:08.151938] [EVAL] [Step 3800] [Acc 75.26] [Best 81.17]
+Step 3850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:08.870475] [TRAIN] [Step 3850] [Time 0.002] [Data 0.016] [MetaTestLoss 1.450901]
+[2024-08-17 10:59:09.111131]  * [Acc@1 73.383] [LossOut 0.654]
+[2024-08-17 10:59:09.203643] [EVAL] [Step 3850] [Acc 73.38] [Best 81.17]
+Step 3900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:10.471348] [TRAIN] [Step 3900] [Time 0.002] [Data 0.016] [MetaTestLoss 1.450465]
+[2024-08-17 10:59:10.712681]  * [Acc@1 70.269] [LossOut 0.744]
+[2024-08-17 10:59:10.712917] [EVAL] [Step 3900] [Acc 70.27] [Best 81.17]
+Step 3950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:11.466725] [TRAIN] [Step 3950] [Time 0.002] [Data 0.016] [MetaTestLoss 1.450231]
+[2024-08-17 10:59:11.706934]  * [Acc@1 78.531] [LossOut 0.577]
+[2024-08-17 10:59:11.707128] [EVAL] [Step 3950] [Acc 78.53] [Best 81.17]
+Step 4000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:12.461707] [TRAIN] [Step 4000] [Time 0.002] [Data 0.016] [MetaTestLoss 1.449847]
+[2024-08-17 10:59:12.701331]  * [Acc@1 80.264] [LossOut 0.602]
+[2024-08-17 10:59:12.701510] [EVAL] [Step 4000] [Acc 80.26] [Best 81.17]
+Step 4050 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:13.615133] [TRAIN] [Step 4050] [Time 0.002] [Data 0.016] [MetaTestLoss 1.449403]
+[2024-08-17 10:59:13.869481]  * [Acc@1 73.891] [LossOut 0.677]
+[2024-08-17 10:59:13.869694] [EVAL] [Step 4050] [Acc 73.89] [Best 81.17]
+Step 4100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:14.926910] [TRAIN] [Step 4100] [Time 0.002] [Data 0.016] [MetaTestLoss 1.449040]
+[2024-08-17 10:59:15.176036]  * [Acc@1 73.262] [LossOut 0.697]
+[2024-08-17 10:59:15.176360] [EVAL] [Step 4100] [Acc 73.26] [Best 81.17]
+Step 4150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:15.936286] [TRAIN] [Step 4150] [Time 0.002] [Data 0.016] [MetaTestLoss 1.448648]
+[2024-08-17 10:59:16.175654]  * [Acc@1 70.420] [LossOut 0.788]
+[2024-08-17 10:59:16.175873] [EVAL] [Step 4150] [Acc 70.42] [Best 81.17]
+Step 4200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:17.050924] [TRAIN] [Step 4200] [Time 0.002] [Data 0.016] [MetaTestLoss 1.448290]
+[2024-08-17 10:59:17.290448]  * [Acc@1 71.195] [LossOut 0.768]
+[2024-08-17 10:59:17.290669] [EVAL] [Step 4200] [Acc 71.20] [Best 81.17]
+Step 4250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:17.932504] [TRAIN] [Step 4250] [Time 0.002] [Data 0.016] [MetaTestLoss 1.447817]
+[2024-08-17 10:59:18.168204]  * [Acc@1 74.296] [LossOut 0.722]
+[2024-08-17 10:59:18.168568] [EVAL] [Step 4250] [Acc 74.30] [Best 81.17]
+Step 4300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:18.900955] [TRAIN] [Step 4300] [Time 0.002] [Data 0.015] [MetaTestLoss 1.447472]
+[2024-08-17 10:59:19.141432]  * [Acc@1 75.762] [LossOut 0.645]
+[2024-08-17 10:59:19.141629] [EVAL] [Step 4300] [Acc 75.76] [Best 81.17]
+Step 4350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:20.679128] [TRAIN] [Step 4350] [Time 0.002] [Data 0.016] [MetaTestLoss 1.447050]
+[2024-08-17 10:59:20.917235]  * [Acc@1 73.828] [LossOut 0.776]
+[2024-08-17 10:59:20.917430] [EVAL] [Step 4350] [Acc 73.83] [Best 81.17]
+Step 4400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:22.041985] [TRAIN] [Step 4400] [Time 0.002] [Data 0.016] [MetaTestLoss 1.446559]
+[2024-08-17 10:59:22.286152]  * [Acc@1 73.816] [LossOut 0.729]
+[2024-08-17 10:59:22.286435] [EVAL] [Step 4400] [Acc 73.82] [Best 81.17]
+Step 4450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:23.111551] [TRAIN] [Step 4450] [Time 0.002] [Data 0.016] [MetaTestLoss 1.446331]
+[2024-08-17 10:59:23.351263]  * [Acc@1 75.619] [LossOut 0.659]
+[2024-08-17 10:59:23.351510] [EVAL] [Step 4450] [Acc 75.62] [Best 81.17]
+Step 4500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:24.599773] [TRAIN] [Step 4500] [Time 0.002] [Data 0.016] [MetaTestLoss 1.445708]
+[2024-08-17 10:59:24.838420]  * [Acc@1 71.876] [LossOut 0.826]
+[2024-08-17 10:59:24.838623] [EVAL] [Step 4500] [Acc 71.88] [Best 81.17]
+Step 4550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:25.758929] [TRAIN] [Step 4550] [Time 0.002] [Data 0.016] [MetaTestLoss 1.445242]
+[2024-08-17 10:59:25.995580]  * [Acc@1 70.779] [LossOut 0.791]
+[2024-08-17 10:59:25.995785] [EVAL] [Step 4550] [Acc 70.78] [Best 81.17]
+Step 4600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:27.302525] [TRAIN] [Step 4600] [Time 0.002] [Data 0.016] [MetaTestLoss 1.444745]
+[2024-08-17 10:59:27.548887]  * [Acc@1 69.957] [LossOut 0.882]
+[2024-08-17 10:59:27.549191] [EVAL] [Step 4600] [Acc 69.96] [Best 81.17]
+Step 4650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:28.578616] [TRAIN] [Step 4650] [Time 0.002] [Data 0.016] [MetaTestLoss 1.444314]
+[2024-08-17 10:59:28.841064]  * [Acc@1 75.579] [LossOut 0.636]
+[2024-08-17 10:59:28.841638] [EVAL] [Step 4650] [Acc 75.58] [Best 81.17]
+Step 4700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:29.771659] [TRAIN] [Step 4700] [Time 0.002] [Data 0.016] [MetaTestLoss 1.444124]
+[2024-08-17 10:59:30.024509]  * [Acc@1 71.272] [LossOut 0.811]
+[2024-08-17 10:59:30.024806] [EVAL] [Step 4700] [Acc 71.27] [Best 81.17]
+Step 4750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:30.746286] [TRAIN] [Step 4750] [Time 0.002] [Data 0.016] [MetaTestLoss 1.443763]
+[2024-08-17 10:59:30.981788]  * [Acc@1 73.239] [LossOut 0.772]
+[2024-08-17 10:59:30.982044] [EVAL] [Step 4750] [Acc 73.24] [Best 81.17]
+Step 4800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:33.246130] [TRAIN] [Step 4800] [Time 0.002] [Data 0.016] [MetaTestLoss 1.443405]
+[2024-08-17 10:59:33.487576]  * [Acc@1 74.308] [LossOut 0.847]
+[2024-08-17 10:59:33.487797] [EVAL] [Step 4800] [Acc 74.31] [Best 81.17]
+Step 4850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:35.393085] [TRAIN] [Step 4850] [Time 0.002] [Data 0.016] [MetaTestLoss 1.443122]
+[2024-08-17 10:59:35.644798]  * [Acc@1 74.922] [LossOut 0.688]
+[2024-08-17 10:59:35.644986] [EVAL] [Step 4850] [Acc 74.92] [Best 81.17]
+Step 4900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:36.473016] [TRAIN] [Step 4900] [Time 0.002] [Data 0.016] [MetaTestLoss 1.442793]
+[2024-08-17 10:59:36.714534]  * [Acc@1 73.114] [LossOut 0.831]
+[2024-08-17 10:59:36.714866] [EVAL] [Step 4900] [Acc 73.11] [Best 81.17]
+Step 4950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:37.427490] [TRAIN] [Step 4950] [Time 0.002] [Data 0.016] [MetaTestLoss 1.442677]
+[2024-08-17 10:59:37.666045]  * [Acc@1 71.743] [LossOut 0.801]
+[2024-08-17 10:59:37.666238] [EVAL] [Step 4950] [Acc 71.74] [Best 81.17]
+Step 5000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:38.672642] [TRAIN] [Step 5000] [Time 0.002] [Data 0.016] [MetaTestLoss 1.442370]
+[2024-08-17 10:59:38.923849]  * [Acc@1 76.338] [LossOut 0.737]
+[2024-08-17 10:59:38.924081] [EVAL] [Step 5000] [Acc 76.34] [Best 81.17]
+Step 5050 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:39.816485] [TRAIN] [Step 5050] [Time 0.002] [Data 0.016] [MetaTestLoss 1.442115]
+[2024-08-17 10:59:40.058729]  * [Acc@1 75.916] [LossOut 0.672]
+[2024-08-17 10:59:40.059045] [EVAL] [Step 5050] [Acc 75.92] [Best 81.17]
+Step 5100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:41.901691] [TRAIN] [Step 5100] [Time 0.002] [Data 0.016] [MetaTestLoss 1.441841]
+[2024-08-17 10:59:42.158331]  * [Acc@1 69.299] [LossOut 0.850]
+[2024-08-17 10:59:42.158613] [EVAL] [Step 5100] [Acc 69.30] [Best 81.17]
+Step 5150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:43.114650] [TRAIN] [Step 5150] [Time 0.002] [Data 0.016] [MetaTestLoss 1.441386]
+[2024-08-17 10:59:43.355823]  * [Acc@1 68.197] [LossOut 0.882]
+[2024-08-17 10:59:43.356044] [EVAL] [Step 5150] [Acc 68.20] [Best 81.17]
+Step 5200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:44.238361] [TRAIN] [Step 5200] [Time 0.002] [Data 0.016] [MetaTestLoss 1.441063]
+[2024-08-17 10:59:44.483159]  * [Acc@1 74.148] [LossOut 0.744]
+[2024-08-17 10:59:44.483411] [EVAL] [Step 5200] [Acc 74.15] [Best 81.17]
+Step 5250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:45.485871] [TRAIN] [Step 5250] [Time 0.002] [Data 0.016] [MetaTestLoss 1.440813]
+[2024-08-17 10:59:45.743806]  * [Acc@1 73.727] [LossOut 0.764]
+[2024-08-17 10:59:45.744048] [EVAL] [Step 5250] [Acc 73.73] [Best 81.17]
+Step 5300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:46.535909] [TRAIN] [Step 5300] [Time 0.002] [Data 0.016] [MetaTestLoss 1.440423]
+[2024-08-17 10:59:46.794832]  * [Acc@1 76.376] [LossOut 0.768]
+[2024-08-17 10:59:46.795083] [EVAL] [Step 5300] [Acc 76.38] [Best 81.17]
+Step 5350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:47.925784] [TRAIN] [Step 5350] [Time 0.002] [Data 0.016] [MetaTestLoss 1.440073]
+[2024-08-17 10:59:48.169904]  * [Acc@1 70.281] [LossOut 0.830]
+[2024-08-17 10:59:48.170294] [EVAL] [Step 5350] [Acc 70.28] [Best 81.17]
+Step 5400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:49.027335] [TRAIN] [Step 5400] [Time 0.002] [Data 0.016] [MetaTestLoss 1.439829]
+[2024-08-17 10:59:49.269379]  * [Acc@1 68.903] [LossOut 0.960]
+[2024-08-17 10:59:49.269672] [EVAL] [Step 5400] [Acc 68.90] [Best 81.17]
+Step 5450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:50.029233] [TRAIN] [Step 5450] [Time 0.002] [Data 0.016] [MetaTestLoss 1.439468]
+[2024-08-17 10:59:50.272710]  * [Acc@1 74.939] [LossOut 0.757]
+[2024-08-17 10:59:50.273024] [EVAL] [Step 5450] [Acc 74.94] [Best 81.17]
+Step 5500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:51.012666] [TRAIN] [Step 5500] [Time 0.002] [Data 0.016] [MetaTestLoss 1.439179]
+[2024-08-17 10:59:51.258894]  * [Acc@1 75.357] [LossOut 0.754]
+[2024-08-17 10:59:51.259155] [EVAL] [Step 5500] [Acc 75.36] [Best 81.17]
+Step 5550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:52.322805] [TRAIN] [Step 5550] [Time 0.002] [Data 0.016] [MetaTestLoss 1.438820]
+[2024-08-17 10:59:52.567653]  * [Acc@1 73.830] [LossOut 0.888]
+[2024-08-17 10:59:52.567860] [EVAL] [Step 5550] [Acc 73.83] [Best 81.17]
+Step 5600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:53.642692] [TRAIN] [Step 5600] [Time 0.002] [Data 0.016] [MetaTestLoss 1.438357]
+[2024-08-17 10:59:53.880652]  * [Acc@1 73.441] [LossOut 0.829]
+[2024-08-17 10:59:53.880961] [EVAL] [Step 5600] [Acc 73.44] [Best 81.17]
+Step 5650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:54.511418] [TRAIN] [Step 5650] [Time 0.002] [Data 0.016] [MetaTestLoss 1.437914]
+[2024-08-17 10:59:54.760163]  * [Acc@1 74.187] [LossOut 0.874]
+[2024-08-17 10:59:54.760475] [EVAL] [Step 5650] [Acc 74.19] [Best 81.17]
+Step 5700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:55.506711] [TRAIN] [Step 5700] [Time 0.002] [Data 0.016] [MetaTestLoss 1.437639]
+[2024-08-17 10:59:55.745683]  * [Acc@1 70.742] [LossOut 0.923]
+[2024-08-17 10:59:55.745875] [EVAL] [Step 5700] [Acc 70.74] [Best 81.17]
+Step 5750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:56.921231] [TRAIN] [Step 5750] [Time 0.002] [Data 0.016] [MetaTestLoss 1.437332]
+[2024-08-17 10:59:57.162732]  * [Acc@1 70.913] [LossOut 0.969]
+[2024-08-17 10:59:57.162963] [EVAL] [Step 5750] [Acc 70.91] [Best 81.17]
+Step 5800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:58.000216] [TRAIN] [Step 5800] [Time 0.002] [Data 0.016] [MetaTestLoss 1.437031]
+[2024-08-17 10:59:58.240501]  * [Acc@1 69.354] [LossOut 0.826]
+[2024-08-17 10:59:58.240821] [EVAL] [Step 5800] [Acc 69.35] [Best 81.17]
+Step 5850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 10:59:59.498043] [TRAIN] [Step 5850] [Time 0.002] [Data 0.016] [MetaTestLoss 1.436795]
+[2024-08-17 10:59:59.746013]  * [Acc@1 72.543] [LossOut 0.802]
+[2024-08-17 10:59:59.746255] [EVAL] [Step 5850] [Acc 72.54] [Best 81.17]
+Step 5900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:00.884724] [TRAIN] [Step 5900] [Time 0.002] [Data 0.016] [MetaTestLoss 1.436436]
+[2024-08-17 11:00:01.131211]  * [Acc@1 72.209] [LossOut 0.779]
+[2024-08-17 11:00:01.131418] [EVAL] [Step 5900] [Acc 72.21] [Best 81.17]
+Step 5950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:01.890066] [TRAIN] [Step 5950] [Time 0.002] [Data 0.016] [MetaTestLoss 1.436092]
+[2024-08-17 11:00:02.132218]  * [Acc@1 69.899] [LossOut 0.874]
+[2024-08-17 11:00:02.132481] [EVAL] [Step 5950] [Acc 69.90] [Best 81.17]
+Step 6000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:02.889188] [TRAIN] [Step 6000] [Time 0.002] [Data 0.016] [MetaTestLoss 1.435817]
+[2024-08-17 11:00:03.129434]  * [Acc@1 73.450] [LossOut 0.754]
+[2024-08-17 11:00:03.129747] [EVAL] [Step 6000] [Acc 73.45] [Best 81.17]
+Step 6050 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:03.792625] [TRAIN] [Step 6050] [Time 0.002] [Data 0.016] [MetaTestLoss 1.435507]
+[2024-08-17 11:00:04.028155]  * [Acc@1 71.682] [LossOut 0.890]
+[2024-08-17 11:00:04.028357] [EVAL] [Step 6050] [Acc 71.68] [Best 81.17]
+Step 6100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:04.662267] [TRAIN] [Step 6100] [Time 0.002] [Data 0.016] [MetaTestLoss 1.435108]
+[2024-08-17 11:00:04.904533]  * [Acc@1 73.280] [LossOut 0.856]
+[2024-08-17 11:00:04.904722] [EVAL] [Step 6100] [Acc 73.28] [Best 81.17]
+Step 6150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:05.494016] [TRAIN] [Step 6150] [Time 0.002] [Data 0.016] [MetaTestLoss 1.434745]
+[2024-08-17 11:00:05.730482]  * [Acc@1 76.215] [LossOut 0.708]
+[2024-08-17 11:00:05.730674] [EVAL] [Step 6150] [Acc 76.22] [Best 81.17]
+Step 6200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:10.396744] [TRAIN] [Step 6200] [Time 0.002] [Data 0.017] [MetaTestLoss 1.434441]
+[2024-08-17 11:00:10.650993]  * [Acc@1 72.981] [LossOut 0.843]
+[2024-08-17 11:00:10.651264] [EVAL] [Step 6200] [Acc 72.98] [Best 81.17]
+Step 6250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:13.010414] [TRAIN] [Step 6250] [Time 0.002] [Data 0.017] [MetaTestLoss 1.434074]
+[2024-08-17 11:00:13.252289]  * [Acc@1 70.876] [LossOut 0.802]
+[2024-08-17 11:00:13.252666] [EVAL] [Step 6250] [Acc 70.88] [Best 81.17]
+Step 6300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:14.140248] [TRAIN] [Step 6300] [Time 0.002] [Data 0.017] [MetaTestLoss 1.433770]
+[2024-08-17 11:00:14.378584]  * [Acc@1 71.353] [LossOut 0.937]
+[2024-08-17 11:00:14.378890] [EVAL] [Step 6300] [Acc 71.35] [Best 81.17]
+Step 6350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:15.963738] [TRAIN] [Step 6350] [Time 0.002] [Data 0.017] [MetaTestLoss 1.433455]
+[2024-08-17 11:00:16.203374]  * [Acc@1 71.877] [LossOut 0.884]
+[2024-08-17 11:00:16.203572] [EVAL] [Step 6350] [Acc 71.88] [Best 81.17]
+Step 6400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:17.227234] [TRAIN] [Step 6400] [Time 0.002] [Data 0.017] [MetaTestLoss 1.433248]
+[2024-08-17 11:00:17.479111]  * [Acc@1 63.672] [LossOut 0.984]
+[2024-08-17 11:00:17.479443] [EVAL] [Step 6400] [Acc 63.67] [Best 81.17]
+Step 6450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:18.888113] [TRAIN] [Step 6450] [Time 0.002] [Data 0.017] [MetaTestLoss 1.432995]
+[2024-08-17 11:00:19.135681]  * [Acc@1 77.078] [LossOut 0.798]
+[2024-08-17 11:00:19.135878] [EVAL] [Step 6450] [Acc 77.08] [Best 81.17]
+Step 6500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:20.690027] [TRAIN] [Step 6500] [Time 0.002] [Data 0.017] [MetaTestLoss 1.432750]
+[2024-08-17 11:00:20.941864]  * [Acc@1 73.777] [LossOut 0.745]
+[2024-08-17 11:00:20.942333] [EVAL] [Step 6500] [Acc 73.78] [Best 81.17]
+Step 6550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:21.612782] [TRAIN] [Step 6550] [Time 0.002] [Data 0.017] [MetaTestLoss 1.432397]
+[2024-08-17 11:00:21.871870]  * [Acc@1 71.282] [LossOut 0.914]
+[2024-08-17 11:00:21.872450] [EVAL] [Step 6550] [Acc 71.28] [Best 81.17]
+Step 6600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:22.757084] [TRAIN] [Step 6600] [Time 0.002] [Data 0.017] [MetaTestLoss 1.432232]
+[2024-08-17 11:00:22.991381]  * [Acc@1 72.724] [LossOut 0.830]
+[2024-08-17 11:00:22.991569] [EVAL] [Step 6600] [Acc 72.72] [Best 81.17]
+Step 6650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:25.113968] [TRAIN] [Step 6650] [Time 0.002] [Data 0.017] [MetaTestLoss 1.431981]
+[2024-08-17 11:00:25.355115]  * [Acc@1 67.221] [LossOut 0.949]
+[2024-08-17 11:00:25.355515] [EVAL] [Step 6650] [Acc 67.22] [Best 81.17]
+Step 6700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:26.124050] [TRAIN] [Step 6700] [Time 0.002] [Data 0.017] [MetaTestLoss 1.431618]
+[2024-08-17 11:00:26.362370]  * [Acc@1 75.785] [LossOut 0.784]
+[2024-08-17 11:00:26.362563] [EVAL] [Step 6700] [Acc 75.79] [Best 81.17]
+Step 6750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:27.256919] [TRAIN] [Step 6750] [Time 0.002] [Data 0.017] [MetaTestLoss 1.431355]
+[2024-08-17 11:00:27.513813]  * [Acc@1 74.333] [LossOut 0.758]
+[2024-08-17 11:00:27.514203] [EVAL] [Step 6750] [Acc 74.33] [Best 81.17]
+Step 6800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:28.683480] [TRAIN] [Step 6800] [Time 0.002] [Data 0.017] [MetaTestLoss 1.431140]
+[2024-08-17 11:00:28.920524]  * [Acc@1 71.597] [LossOut 0.866]
+[2024-08-17 11:00:28.920836] [EVAL] [Step 6800] [Acc 71.60] [Best 81.17]
+Step 6850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:29.886182] [TRAIN] [Step 6850] [Time 0.002] [Data 0.017] [MetaTestLoss 1.430911]
+[2024-08-17 11:00:30.126441]  * [Acc@1 70.558] [LossOut 0.947]
+[2024-08-17 11:00:30.126798] [EVAL] [Step 6850] [Acc 70.56] [Best 81.17]
+Step 6900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:31.701411] [TRAIN] [Step 6900] [Time 0.002] [Data 0.018] [MetaTestLoss 1.430721]
+[2024-08-17 11:00:31.956123]  * [Acc@1 72.764] [LossOut 0.764]
+[2024-08-17 11:00:31.956568] [EVAL] [Step 6900] [Acc 72.76] [Best 81.17]
+Step 6950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:32.798537] [TRAIN] [Step 6950] [Time 0.002] [Data 0.018] [MetaTestLoss 1.430291]
+[2024-08-17 11:00:33.059152]  * [Acc@1 71.989] [LossOut 0.859]
+[2024-08-17 11:00:33.059462] [EVAL] [Step 6950] [Acc 71.99] [Best 81.17]
+Step 7000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:37.000081] [TRAIN] [Step 7000] [Time 0.002] [Data 0.018] [MetaTestLoss 1.430158]
+[2024-08-17 11:00:37.253722]  * [Acc@1 74.952] [LossOut 0.731]
+[2024-08-17 11:00:37.254148] [EVAL] [Step 7000] [Acc 74.95] [Best 81.17]
+Step 7050 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:38.375321] [TRAIN] [Step 7050] [Time 0.002] [Data 0.018] [MetaTestLoss 1.429917]
+[2024-08-17 11:00:38.633244]  * [Acc@1 67.296] [LossOut 0.886]
+[2024-08-17 11:00:38.633805] [EVAL] [Step 7050] [Acc 67.30] [Best 81.17]
+Step 7100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:39.592967] [TRAIN] [Step 7100] [Time 0.002] [Data 0.018] [MetaTestLoss 1.429650]
+[2024-08-17 11:00:39.853422]  * [Acc@1 73.348] [LossOut 0.820]
+[2024-08-17 11:00:39.853680] [EVAL] [Step 7100] [Acc 73.35] [Best 81.17]
+Step 7150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:40.995195] [TRAIN] [Step 7150] [Time 0.002] [Data 0.018] [MetaTestLoss 1.429539]
+[2024-08-17 11:00:41.249573]  * [Acc@1 72.251] [LossOut 0.929]
+[2024-08-17 11:00:41.249915] [EVAL] [Step 7150] [Acc 72.25] [Best 81.17]
+Step 7200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:42.274120] [TRAIN] [Step 7200] [Time 0.002] [Data 0.018] [MetaTestLoss 1.429276]
+[2024-08-17 11:00:42.520819]  * [Acc@1 74.165] [LossOut 0.903]
+[2024-08-17 11:00:42.521017] [EVAL] [Step 7200] [Acc 74.17] [Best 81.17]
+Step 7250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:43.229466] [TRAIN] [Step 7250] [Time 0.002] [Data 0.018] [MetaTestLoss 1.428981]
+[2024-08-17 11:00:43.470050]  * [Acc@1 72.872] [LossOut 0.883]
+[2024-08-17 11:00:43.470329] [EVAL] [Step 7250] [Acc 72.87] [Best 81.17]
+Step 7300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:44.373505] [TRAIN] [Step 7300] [Time 0.002] [Data 0.018] [MetaTestLoss 1.428671]
+[2024-08-17 11:00:44.614758]  * [Acc@1 70.438] [LossOut 0.967]
+[2024-08-17 11:00:44.614970] [EVAL] [Step 7300] [Acc 70.44] [Best 81.17]
+Step 7350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:45.400217] [TRAIN] [Step 7350] [Time 0.002] [Data 0.018] [MetaTestLoss 1.428491]
+[2024-08-17 11:00:45.640477]  * [Acc@1 72.198] [LossOut 0.894]
+[2024-08-17 11:00:45.640668] [EVAL] [Step 7350] [Acc 72.20] [Best 81.17]
+Step 7400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:46.684763] [TRAIN] [Step 7400] [Time 0.002] [Data 0.018] [MetaTestLoss 1.428267]
+[2024-08-17 11:00:46.932983]  * [Acc@1 74.786] [LossOut 0.906]
+[2024-08-17 11:00:46.933218] [EVAL] [Step 7400] [Acc 74.79] [Best 81.17]
+Step 7450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:47.621822] [TRAIN] [Step 7450] [Time 0.002] [Data 0.018] [MetaTestLoss 1.428115]
+[2024-08-17 11:00:47.862080]  * [Acc@1 69.982] [LossOut 0.943]
+[2024-08-17 11:00:47.862339] [EVAL] [Step 7450] [Acc 69.98] [Best 81.17]
+Step 7500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:48.852303] [TRAIN] [Step 7500] [Time 0.002] [Data 0.018] [MetaTestLoss 1.427885]
+[2024-08-17 11:00:49.088615]  * [Acc@1 66.785] [LossOut 0.961]
+[2024-08-17 11:00:49.088813] [EVAL] [Step 7500] [Acc 66.78] [Best 81.17]
+Step 7550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:49.819159] [TRAIN] [Step 7550] [Time 0.002] [Data 0.018] [MetaTestLoss 1.427523]
+[2024-08-17 11:00:50.054017]  * [Acc@1 73.365] [LossOut 0.915]
+[2024-08-17 11:00:50.054206] [EVAL] [Step 7550] [Acc 73.36] [Best 81.17]
+Step 7600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:50.736935] [TRAIN] [Step 7600] [Time 0.002] [Data 0.018] [MetaTestLoss 1.427354]
+[2024-08-17 11:00:50.992421]  * [Acc@1 73.581] [LossOut 0.933]
+[2024-08-17 11:00:50.992677] [EVAL] [Step 7600] [Acc 73.58] [Best 81.17]
+Step 7650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:51.694517] [TRAIN] [Step 7650] [Time 0.002] [Data 0.018] [MetaTestLoss 1.427144]
+[2024-08-17 11:00:51.942318]  * [Acc@1 71.891] [LossOut 0.836]
+[2024-08-17 11:00:51.942663] [EVAL] [Step 7650] [Acc 71.89] [Best 81.17]
+Step 7700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:53.130589] [TRAIN] [Step 7700] [Time 0.002] [Data 0.018] [MetaTestLoss 1.426819]
+[2024-08-17 11:00:53.368162]  * [Acc@1 75.340] [LossOut 0.814]
+[2024-08-17 11:00:53.368433] [EVAL] [Step 7700] [Acc 75.34] [Best 81.17]
+Step 7750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:54.094087] [TRAIN] [Step 7750] [Time 0.002] [Data 0.018] [MetaTestLoss 1.426598]
+[2024-08-17 11:00:54.334442]  * [Acc@1 74.744] [LossOut 0.870]
+[2024-08-17 11:00:54.334660] [EVAL] [Step 7750] [Acc 74.74] [Best 81.17]
+Step 7800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:55.376732] [TRAIN] [Step 7800] [Time 0.002] [Data 0.018] [MetaTestLoss 1.426386]
+[2024-08-17 11:00:55.619424]  * [Acc@1 70.775] [LossOut 0.974]
+[2024-08-17 11:00:55.619618] [EVAL] [Step 7800] [Acc 70.78] [Best 81.17]
+Step 7850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:56.660019] [TRAIN] [Step 7850] [Time 0.002] [Data 0.018] [MetaTestLoss 1.426097]
+[2024-08-17 11:00:56.918188]  * [Acc@1 74.685] [LossOut 0.822]
+[2024-08-17 11:00:56.918423] [EVAL] [Step 7850] [Acc 74.68] [Best 81.17]
+Step 7900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:57.761525] [TRAIN] [Step 7900] [Time 0.002] [Data 0.018] [MetaTestLoss 1.425822]
+[2024-08-17 11:00:58.002896]  * [Acc@1 70.470] [LossOut 0.971]
+[2024-08-17 11:00:58.003238] [EVAL] [Step 7900] [Acc 70.47] [Best 81.17]
+Step 7950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:00:59.234310] [TRAIN] [Step 7950] [Time 0.002] [Data 0.018] [MetaTestLoss 1.425568]
+[2024-08-17 11:00:59.477489]  * [Acc@1 75.506] [LossOut 0.803]
+[2024-08-17 11:00:59.477754] [EVAL] [Step 7950] [Acc 75.51] [Best 81.17]
+Step 8000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:00.297016] [TRAIN] [Step 8000] [Time 0.002] [Data 0.018] [MetaTestLoss 1.425351]
+[2024-08-17 11:01:00.535818]  * [Acc@1 73.586] [LossOut 0.771]
+[2024-08-17 11:01:00.536060] [EVAL] [Step 8000] [Acc 73.59] [Best 81.17]
+Step 8050 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:01.381767] [TRAIN] [Step 8050] [Time 0.002] [Data 0.018] [MetaTestLoss 1.425117]
+[2024-08-17 11:01:01.622872]  * [Acc@1 72.907] [LossOut 0.891]
+[2024-08-17 11:01:01.623227] [EVAL] [Step 8050] [Acc 72.91] [Best 81.17]
+Step 8100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:02.591533] [TRAIN] [Step 8100] [Time 0.002] [Data 0.018] [MetaTestLoss 1.424870]
+[2024-08-17 11:01:02.832351]  * [Acc@1 67.500] [LossOut 0.924]
+[2024-08-17 11:01:02.832641] [EVAL] [Step 8100] [Acc 67.50] [Best 81.17]
+Step 8150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:03.506064] [TRAIN] [Step 8150] [Time 0.002] [Data 0.018] [MetaTestLoss 1.424673]
+[2024-08-17 11:01:03.749623]  * [Acc@1 69.944] [LossOut 0.907]
+[2024-08-17 11:01:03.750013] [EVAL] [Step 8150] [Acc 69.94] [Best 81.17]
+Step 8200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:04.704823] [TRAIN] [Step 8200] [Time 0.002] [Data 0.018] [MetaTestLoss 1.424420]
+[2024-08-17 11:01:04.955070]  * [Acc@1 74.490] [LossOut 0.759]
+[2024-08-17 11:01:04.955279] [EVAL] [Step 8200] [Acc 74.49] [Best 81.17]
+Step 8250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:05.945846] [TRAIN] [Step 8250] [Time 0.002] [Data 0.018] [MetaTestLoss 1.424187]
+[2024-08-17 11:01:06.185500]  * [Acc@1 74.693] [LossOut 0.791]
+[2024-08-17 11:01:06.185884] [EVAL] [Step 8250] [Acc 74.69] [Best 81.17]
+Step 8300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:07.028429] [TRAIN] [Step 8300] [Time 0.002] [Data 0.018] [MetaTestLoss 1.423898]
+[2024-08-17 11:01:07.266998]  * [Acc@1 71.456] [LossOut 0.906]
+[2024-08-17 11:01:07.267254] [EVAL] [Step 8300] [Acc 71.46] [Best 81.17]
+Step 8350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:07.962708] [TRAIN] [Step 8350] [Time 0.002] [Data 0.018] [MetaTestLoss 1.423649]
+[2024-08-17 11:01:08.199771]  * [Acc@1 70.538] [LossOut 0.874]
+[2024-08-17 11:01:08.199986] [EVAL] [Step 8350] [Acc 70.54] [Best 81.17]
+Step 8400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:08.894498] [TRAIN] [Step 8400] [Time 0.002] [Data 0.018] [MetaTestLoss 1.423410]
+[2024-08-17 11:01:09.138878]  * [Acc@1 74.703] [LossOut 0.758]
+[2024-08-17 11:01:09.139179] [EVAL] [Step 8400] [Acc 74.70] [Best 81.17]
+Step 8450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:09.813982] [TRAIN] [Step 8450] [Time 0.002] [Data 0.018] [MetaTestLoss 1.423265]
+[2024-08-17 11:01:10.053921]  * [Acc@1 69.203] [LossOut 1.005]
+[2024-08-17 11:01:10.054192] [EVAL] [Step 8450] [Acc 69.20] [Best 81.17]
+Step 8500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:10.926957] [TRAIN] [Step 8500] [Time 0.002] [Data 0.018] [MetaTestLoss 1.423007]
+[2024-08-17 11:01:11.181627]  * [Acc@1 67.306] [LossOut 0.993]
+[2024-08-17 11:01:11.182771] [EVAL] [Step 8500] [Acc 67.31] [Best 81.17]
+Step 8550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:12.405740] [TRAIN] [Step 8550] [Time 0.002] [Data 0.018] [MetaTestLoss 1.422723]
+[2024-08-17 11:01:12.646658]  * [Acc@1 74.381] [LossOut 0.994]
+[2024-08-17 11:01:12.646872] [EVAL] [Step 8550] [Acc 74.38] [Best 81.17]
+Step 8600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:13.498480] [TRAIN] [Step 8600] [Time 0.002] [Data 0.018] [MetaTestLoss 1.422503]
+[2024-08-17 11:01:13.742559]  * [Acc@1 72.126] [LossOut 0.859]
+[2024-08-17 11:01:13.742792] [EVAL] [Step 8600] [Acc 72.13] [Best 81.17]
+Step 8650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:14.590851] [TRAIN] [Step 8650] [Time 0.002] [Data 0.018] [MetaTestLoss 1.422150]
+[2024-08-17 11:01:14.831897]  * [Acc@1 72.968] [LossOut 0.926]
+[2024-08-17 11:01:14.832295] [EVAL] [Step 8650] [Acc 72.97] [Best 81.17]
+Step 8700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:15.738118] [TRAIN] [Step 8700] [Time 0.002] [Data 0.018] [MetaTestLoss 1.421925]
+[2024-08-17 11:01:15.975175]  * [Acc@1 72.583] [LossOut 0.898]
+[2024-08-17 11:01:15.975389] [EVAL] [Step 8700] [Acc 72.58] [Best 81.17]
+Step 8750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:17.080506] [TRAIN] [Step 8750] [Time 0.002] [Data 0.018] [MetaTestLoss 1.421787]
+[2024-08-17 11:01:17.326659]  * [Acc@1 73.953] [LossOut 0.717]
+[2024-08-17 11:01:17.327080] [EVAL] [Step 8750] [Acc 73.95] [Best 81.17]
+Step 8800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:18.382566] [TRAIN] [Step 8800] [Time 0.002] [Data 0.018] [MetaTestLoss 1.421525]
+[2024-08-17 11:01:18.621391]  * [Acc@1 68.644] [LossOut 0.950]
+[2024-08-17 11:01:18.621586] [EVAL] [Step 8800] [Acc 68.64] [Best 81.17]
+Step 8850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:19.501401] [TRAIN] [Step 8850] [Time 0.002] [Data 0.018] [MetaTestLoss 1.421269]
+[2024-08-17 11:01:19.758147]  * [Acc@1 68.891] [LossOut 0.977]
+[2024-08-17 11:01:19.758392] [EVAL] [Step 8850] [Acc 68.89] [Best 81.17]
+Step 8900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:20.974737] [TRAIN] [Step 8900] [Time 0.002] [Data 0.018] [MetaTestLoss 1.421150]
+[2024-08-17 11:01:21.251975]  * [Acc@1 71.768] [LossOut 0.976]
+[2024-08-17 11:01:21.252213] [EVAL] [Step 8900] [Acc 71.77] [Best 81.17]
+Step 8950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:22.502921] [TRAIN] [Step 8950] [Time 0.002] [Data 0.018] [MetaTestLoss 1.420932]
+[2024-08-17 11:01:22.763727]  * [Acc@1 67.390] [LossOut 0.905]
+[2024-08-17 11:01:22.764145] [EVAL] [Step 8950] [Acc 67.39] [Best 81.17]
+Step 9000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:23.722500] [TRAIN] [Step 9000] [Time 0.002] [Data 0.018] [MetaTestLoss 1.420696]
+[2024-08-17 11:01:23.965934]  * [Acc@1 69.748] [LossOut 0.900]
+[2024-08-17 11:01:23.966211] [EVAL] [Step 9000] [Acc 69.75] [Best 81.17]
+Step 9050 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:24.780446] [TRAIN] [Step 9050] [Time 0.002] [Data 0.018] [MetaTestLoss 1.420461]
+[2024-08-17 11:01:25.036482]  * [Acc@1 73.652] [LossOut 0.841]
+[2024-08-17 11:01:25.036723] [EVAL] [Step 9050] [Acc 73.65] [Best 81.17]
+Step 9100 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:26.291065] [TRAIN] [Step 9100] [Time 0.002] [Data 0.018] [MetaTestLoss 1.420268]
+[2024-08-17 11:01:26.532869]  * [Acc@1 69.997] [LossOut 1.021]
+[2024-08-17 11:01:26.533248] [EVAL] [Step 9100] [Acc 70.00] [Best 81.17]
+Step 9150 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:27.384371] [TRAIN] [Step 9150] [Time 0.002] [Data 0.018] [MetaTestLoss 1.420013]
+[2024-08-17 11:01:27.623422]  * [Acc@1 70.360] [LossOut 0.951]
+[2024-08-17 11:01:27.623628] [EVAL] [Step 9150] [Acc 70.36] [Best 81.17]
+Step 9200 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:28.637176] [TRAIN] [Step 9200] [Time 0.002] [Data 0.018] [MetaTestLoss 1.419870]
+[2024-08-17 11:01:28.873314]  * [Acc@1 72.439] [LossOut 0.900]
+[2024-08-17 11:01:28.873615] [EVAL] [Step 9200] [Acc 72.44] [Best 81.17]
+Step 9250 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:29.716331] [TRAIN] [Step 9250] [Time 0.002] [Data 0.018] [MetaTestLoss 1.419632]
+[2024-08-17 11:01:29.961425]  * [Acc@1 72.676] [LossOut 0.915]
+[2024-08-17 11:01:29.961762] [EVAL] [Step 9250] [Acc 72.68] [Best 81.17]
+Step 9300 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:30.689562] [TRAIN] [Step 9300] [Time 0.002] [Data 0.018] [MetaTestLoss 1.419331]
+[2024-08-17 11:01:30.928923]  * [Acc@1 69.359] [LossOut 0.938]
+[2024-08-17 11:01:30.929107] [EVAL] [Step 9300] [Acc 69.36] [Best 81.17]
+Step 9350 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:31.662502] [TRAIN] [Step 9350] [Time 0.002] [Data 0.018] [MetaTestLoss 1.419093]
+[2024-08-17 11:01:31.904387]  * [Acc@1 71.310] [LossOut 0.899]
+[2024-08-17 11:01:31.904738] [EVAL] [Step 9350] [Acc 71.31] [Best 81.17]
+Step 9400 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:32.627354] [TRAIN] [Step 9400] [Time 0.002] [Data 0.017] [MetaTestLoss 1.418941]
+[2024-08-17 11:01:32.867584]  * [Acc@1 73.868] [LossOut 0.844]
+[2024-08-17 11:01:32.867770] [EVAL] [Step 9400] [Acc 73.87] [Best 81.17]
+Step 9450 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:33.617880] [TRAIN] [Step 9450] [Time 0.002] [Data 0.017] [MetaTestLoss 1.418723]
+[2024-08-17 11:01:33.858085]  * [Acc@1 71.338] [LossOut 1.010]
+[2024-08-17 11:01:33.858322] [EVAL] [Step 9450] [Acc 71.34] [Best 81.17]
+Step 9500 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:35.558546] [TRAIN] [Step 9500] [Time 0.002] [Data 0.018] [MetaTestLoss 1.418512]
+[2024-08-17 11:01:35.801181]  * [Acc@1 70.523] [LossOut 0.910]
+[2024-08-17 11:01:35.801392] [EVAL] [Step 9500] [Acc 70.52] [Best 81.17]
+Step 9550 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:36.550788] [TRAIN] [Step 9550] [Time 0.002] [Data 0.018] [MetaTestLoss 1.418362]
+[2024-08-17 11:01:36.815203]  * [Acc@1 70.536] [LossOut 0.921]
+[2024-08-17 11:01:36.815788] [EVAL] [Step 9550] [Acc 70.54] [Best 81.17]
+Step 9600 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:37.994180] [TRAIN] [Step 9600] [Time 0.002] [Data 0.018] [MetaTestLoss 1.418117]
+[2024-08-17 11:01:38.277635]  * [Acc@1 72.872] [LossOut 0.922]
+[2024-08-17 11:01:38.277855] [EVAL] [Step 9600] [Acc 72.87] [Best 81.17]
+Step 9650 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:39.108970] [TRAIN] [Step 9650] [Time 0.002] [Data 0.018] [MetaTestLoss 1.417897]
+[2024-08-17 11:01:39.388166]  * [Acc@1 72.251] [LossOut 0.854]
+[2024-08-17 11:01:39.388644] [EVAL] [Step 9650] [Acc 72.25] [Best 81.17]
+Step 9700 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:40.420574] [TRAIN] [Step 9700] [Time 0.002] [Data 0.018] [MetaTestLoss 1.417658]
+[2024-08-17 11:01:40.664695]  * [Acc@1 70.840] [LossOut 0.939]
+[2024-08-17 11:01:40.664957] [EVAL] [Step 9700] [Acc 70.84] [Best 81.17]
+Step 9750 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:41.714399] [TRAIN] [Step 9750] [Time 0.002] [Data 0.018] [MetaTestLoss 1.417538]
+[2024-08-17 11:01:41.955342]  * [Acc@1 65.755] [LossOut 1.043]
+[2024-08-17 11:01:41.955645] [EVAL] [Step 9750] [Acc 65.76] [Best 81.17]
+Step 9800 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:42.949711] [TRAIN] [Step 9800] [Time 0.002] [Data 0.018] [MetaTestLoss 1.417361]
+[2024-08-17 11:01:43.193159]  * [Acc@1 70.579] [LossOut 0.992]
+[2024-08-17 11:01:43.193385] [EVAL] [Step 9800] [Acc 70.58] [Best 81.17]
+Step 9850 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:43.899044] [TRAIN] [Step 9850] [Time 0.002] [Data 0.017] [MetaTestLoss 1.417127]
+[2024-08-17 11:01:44.140899]  * [Acc@1 75.443] [LossOut 0.934]
+[2024-08-17 11:01:44.141083] [EVAL] [Step 9850] [Acc 75.44] [Best 81.17]
+Step 9900 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:45.646013] [TRAIN] [Step 9900] [Time 0.002] [Data 0.018] [MetaTestLoss 1.416887]
+[2024-08-17 11:01:45.886881]  * [Acc@1 69.429] [LossOut 0.984]
+[2024-08-17 11:01:45.887242] [EVAL] [Step 9900] [Acc 69.43] [Best 81.17]
+Step 9950 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:46.663560] [TRAIN] [Step 9950] [Time 0.002] [Data 0.018] [MetaTestLoss 1.416710]
+[2024-08-17 11:01:46.925779]  * [Acc@1 70.227] [LossOut 1.115]
+[2024-08-17 11:01:46.926179] [EVAL] [Step 9950] [Acc 70.23] [Best 81.17]
+Step 10000 (./logs/240817_diabetes_mlp_protonet_5way_5shot_20query_seed0)
+[2024-08-17 11:01:47.950020] [TRAIN] [Step 10000] [Time 0.002] [Data 0.018] [MetaTestLoss 1.416502]
+[2024-08-17 11:01:48.191558]  * [Acc@1 70.158] [LossOut 1.029]
+[2024-08-17 11:01:48.191945] [EVAL] [Step 10000] [Acc 70.16] [Best 81.17]
